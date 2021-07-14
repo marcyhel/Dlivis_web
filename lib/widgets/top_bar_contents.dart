@@ -41,7 +41,7 @@ class _TopBarContentsState extends State<TopBarContents> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'EXPLORE',
+                'WINEE',
                 style: TextStyle(
                   color: Colors.blueGrey[100],
                   fontSize: 20,
@@ -55,7 +55,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(width: screenSize.width / 8),
-                    InkWell(
+                    /*InkWell(
                       onHover: (value) {
                         setState(() {
                           value
@@ -125,7 +125,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           )
                         ],
                       ),
-                    ),
+                    ),*/
                   ],
                 ),
               ),
@@ -141,7 +141,7 @@ class _TopBarContentsState extends State<TopBarContents> {
               SizedBox(
                 width: screenSize.width / 50,
               ),
-              InkWell(
+              /*InkWell(
                 onHover: (value) {
                   setState(() {
                     value ? _isHovering[3] = true : _isHovering[3] = false;
@@ -232,7 +232,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           )
                         ],
                       ),
-              ),
+              ),*/
             ],
           ),
         ),
