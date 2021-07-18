@@ -6,6 +6,8 @@ import 'package:explore/widgets/destination_heading.dart';
 import 'package:explore/widgets/explore_drawer.dart';
 import 'package:explore/widgets/featured_heading.dart';
 import 'package:explore/widgets/featured_tiles.dart';
+import 'package:explore/widgets/featured_heading_pago.dart';
+import 'package:explore/widgets/featured_tiles_pago.dart';
 import 'package:explore/widgets/floating_quick_access_bar.dart';
 import 'package:explore/widgets/responsive.dart';
 import 'package:explore/widgets/top_bar_contents.dart';
@@ -57,6 +59,7 @@ class _HomePageState extends State<HomePage> {
                   icon: Icon(Icons.brightness_6),
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
+                  color:Colors.blueGrey[100],
                   onPressed: () {
                     EasyDynamicTheme.of(context).changeTheme();
                   },
@@ -77,7 +80,7 @@ class _HomePageState extends State<HomePage> {
               preferredSize: Size(screenSize.width, 1000),
               child: TopBarContents(_opacity),
             ),
-      drawer: ExploreDrawer(),
+      //drawer: ExploreDrawer(),
       body: WebScrollbar(
         color: Colors.blueGrey,
         backgroundColor: Colors.blueGrey.withOpacity(0.3),
@@ -96,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                       height: screenSize.height * 0.45,
                       width: screenSize.width,
                       child: Image.asset(
-                        'assets/images/cover.jpg',
+                        'assets/images/baner.png',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -120,6 +123,10 @@ class _HomePageState extends State<HomePage> {
               ),
               DestinationHeading(screenSize: screenSize),
               DestinationCarousel(),
+              FeaturedHeading_pago(
+                              screenSize: screenSize,
+                            ),
+                            FeaturedTiles_pago(screenSize: screenSize),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),
             ],

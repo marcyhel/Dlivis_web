@@ -16,7 +16,7 @@ class BottomBar extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    BottomBarColumn(
+                    /*BottomBarColumn(
                       heading: 'ABOUT',
                       s1: 'Contact Us',
                       s2: 'About Us',
@@ -27,12 +27,12 @@ class BottomBar extends StatelessWidget {
                       s1: 'Payment',
                       s2: 'Cancellation',
                       s3: 'FAQ',
-                    ),
+                    ),*/
                     BottomBarColumn(
                       heading: 'SOCIAL',
-                      s1: 'Twitter',
-                      s2: 'Facebook',
-                      s3: 'YouTube',
+                      s1: 'WhatsApp',
+                      s2: 'Instagram',
+                      s3: '',
                     ),
                   ],
                 ),
@@ -44,22 +44,21 @@ class BottomBar extends StatelessWidget {
                 SizedBox(height: 20),
                 InfoText(
                   type: 'Email',
-                  text: 'explore@gmail.com',
+                  text: 'winee.lingerie@outlook.com',
                 ),
                 SizedBox(height: 5),
                 InfoText(
-                  type: 'Address',
-                  text: '128, Trymore Road, Delft, MN - 56124',
+                  type: 'Contato',
+                  text: '(62) 99234-9163',
                 ),
-                SizedBox(height: 20),
-                Container(
-                  color: Colors.blueGrey,
-                  width: double.maxFinite,
-                  height: 1,
+                SizedBox(height: 5),
+                InfoText(
+                  type: 'Endereço',
+                  text: 'Taquaral - GO, 76640-000',
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Copyright © 2020 | EXPLORE',
+                  'Copyright © 2021 | WINEE',
                   style: TextStyle(
                     color: Colors.blueGrey[300],
                     fontSize: 14,
@@ -73,23 +72,23 @@ class BottomBar extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    BottomBarColumn(
+                    /*BottomBarColumn(
                       heading: 'ABOUT',
                       s1: 'Contact Us',
                       s2: 'About Us',
                       s3: 'Careers',
                     ),
                     BottomBarColumn(
-                      heading: 'HELP',
-                      s1: 'Payment',
-                      s2: 'Cancellation',
-                      s3: 'FAQ',
-                    ),
+                      heading: 'AJUDA',
+                      s1: 'h.marcyhel2012@gmail.com',
+                      s2: '',
+                      s3: '',
+                    ),*/
                     BottomBarColumn(
                       heading: 'SOCIAL',
-                      s1: 'Twitter',
-                      s2: 'Facebook',
-                      s3: 'YouTube',
+                      s1: 'WhatsApp',
+                      s2: 'Instagram',
+                      s3: '',
                     ),
                     Container(
                       color: Colors.blueGrey,
@@ -101,12 +100,17 @@ class BottomBar extends StatelessWidget {
                       children: [
                         InfoText(
                           type: 'Email',
-                          text: 'explore@gmail.com',
+                          text: 'winee.lingerie@outlook.com',
                         ),
                         SizedBox(height: 5),
                         InfoText(
-                          type: 'Address',
-                          text: '128, Trymore Road, Delft, MN - 56124',
+                          type: 'Contato',
+                          text: '(62) 99234-9163',
+                        ),
+                        SizedBox(height: 5),
+                        InfoText(
+                          type: 'Endereço',
+                          text: 'Taquaral - GO, 76640-000',
                         )
                       ],
                     ),
@@ -122,7 +126,7 @@ class BottomBar extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Copyright © 2020 | EXPLORE',
+                  'Copyright © 2021 | WINEE',
                   style: TextStyle(
                     color: Colors.blueGrey[300],
                     fontSize: 14,

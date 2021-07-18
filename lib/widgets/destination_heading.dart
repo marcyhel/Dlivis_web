@@ -20,7 +20,7 @@ class DestinationHeading extends StatelessWidget {
             width: screenSize.width,
             // color: Colors.black,
             child: Text(
-              'Destinations diversity',
+              'Confira algum de nossos modelos.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 24,
@@ -37,7 +37,7 @@ class DestinationHeading extends StatelessWidget {
             width: screenSize.width,
             // color: Colors.black,
             child: Text(
-              'Destinations diversity',
+              'Confira algum de nossos modelos.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 40,

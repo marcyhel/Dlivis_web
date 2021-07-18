@@ -9,6 +9,7 @@ void main() {
   runApp(
     EasyDynamicThemeWidget(
       child: MyApp(),
+      //initialThemeMode: ThemeData.light(),
     ),
   );
 }

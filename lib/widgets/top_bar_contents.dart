@@ -43,7 +43,7 @@ class _TopBarContentsState extends State<TopBarContents> {
               Text(
                 'WINEE',
                 style: TextStyle(
-                  color: Colors.blueGrey[100],
+                  color: Colors.blueGrey[200],
                   fontSize: 20,
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w400,
@@ -133,7 +133,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                 icon: Icon(Icons.brightness_6),
                 splashColor: Colors.transparent,
                 highlightColor: Colors.transparent,
-                color: Colors.white,
+                color: Colors.blueGrey[200],
                 onPressed: () {
                   EasyDynamicTheme.of(context).changeTheme();
                 },

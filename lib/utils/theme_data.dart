@@ -25,7 +25,7 @@ var lightThemeData = ThemeData(
 var darkThemeData = ThemeData(
   primarySwatch: Colors.blueGrey,
   backgroundColor: Colors.blueGrey[900],
-  cardColor: Colors.black,
+  cardColor: Colors.grey[900],
   primaryTextTheme: TextTheme(
     button: TextStyle(
       color: Colors.blueGrey[200],
@@ -41,7 +41,7 @@ var darkThemeData = ThemeData(
       color: Colors.white70,
     ),
   ),
-  bottomAppBarColor: Colors.black,
+  bottomAppBarColor: Colors.grey[900],
   iconTheme: IconThemeData(color: Colors.blueGrey[200]),
   brightness: Brightness.dark,
 );

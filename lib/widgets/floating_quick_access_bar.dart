@@ -1,5 +1,7 @@
 import 'package:explore/widgets/responsive.dart';
 import 'package:flutter/material.dart';
+import 'package:ant_icons/ant_icons.dart';
+import 'dart:html' as html;
 
 class FloatingQuickAccessBar extends StatefulWidget {
   const FloatingQuickAccessBar({
@@ -16,13 +18,17 @@ class FloatingQuickAccessBar extends StatefulWidget {
 class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
   List _isHovering = [false, false, false, false];
   List<Widget> rowElements = [];
-
-  List<String> items = ['Destination', 'Dates', 'People', 'Experience'];
+  /*https://www.instagram.com/winee.lingerie/ */
+  List<String> items = ['WhatsApp', 'Instagram', "Catalogo"];
+  List<String> link = [
+    'https://wa.me/message/3JLR7KAFW5JSE1',
+    'https://www.instagram.com/winee.lingerie/',
+    'https://wa.me/c/556292349163'
+  ];
   List<IconData> icons = [
-    Icons.location_on,
-    Icons.date_range,
-    Icons.people,
-    Icons.wb_sunny
+    AntIcons.phone_outline,
+    AntIcons.instagram_outline,
+    Icons.art_track_outlined,
   ];
 
   List<Widget> generateRowElements() {
@@ -36,7 +42,10 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
             value ? _isHovering[i] = true : _isHovering[i] = false;
           });
         },
-        onTap: () {},
+        onTap: () {
+          print("abre");
+          html.window.open(link[i], items[i]);
+        },
         child: Text(
           items[i],
           style: TextStyle(
@@ -84,26 +93,29 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                     (int pageIndex) => Padding(
                       padding:
                           EdgeInsets.only(top: widget.screenSize.height / 80),
-                      child: Card(
-                        color: Theme.of(context).cardColor,
-                        elevation: 4,
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                              top: widget.screenSize.height / 45,
-                              bottom: widget.screenSize.height / 45,
-                              left: widget.screenSize.width / 20),
-                          child: Row(
-                            children: [
-                              Icon(
-                                icons[pageIndex],
-                                color: Theme.of(context).iconTheme.color,
-                              ),
-                              SizedBox(width: widget.screenSize.width / 20),
-                              InkWell(
-                                splashColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                onTap: () {},
-                                child: Text(
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        onTap: () {
+                          print("abre");
+                          html.window.open(link[pageIndex], items[pageIndex]);
+                        },
+                        child: Card(
+                          color: Theme.of(context).cardColor,
+                          elevation: 4,
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                top: widget.screenSize.height / 45,
+                                bottom: widget.screenSize.height / 45,
+                                left: widget.screenSize.width / 20),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  icons[pageIndex],
+                                  color: Theme.of(context).iconTheme.color,
+                                ),
+                                SizedBox(width: widget.screenSize.width / 20),
+                                Text(
                                   items[pageIndex],
                                   style: TextStyle(
                                       color: Theme.of(context)
@@ -112,8 +124,8 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                                           .color,
                                       fontSize: 16),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),

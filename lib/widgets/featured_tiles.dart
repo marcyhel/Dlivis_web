@@ -10,12 +10,12 @@ class FeaturedTiles extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'assets/images/trekking.jpg',
-    'assets/images/animals.jpg',
-    'assets/images/photography.jpeg',
+    'assets/images/11.jpeg',
+    'assets/images/2.jpeg',
+    'assets/images/10.jpeg',
   ];
 
-  final List<String> title = ['Trekking', 'Animals', 'Photography'];
+  final List<String> title = ['Baby dool', 'Camisola', 'Pijama'];
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +35,8 @@ class FeaturedTiles extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              height: screenSize.width / 2.5,
-                              width: screenSize.width / 1.5,
+                              height: screenSize.width / 1.2,
+                              width: screenSize.width / 1.7,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(5.0),
                                 child: Image.asset(
@@ -85,7 +85,7 @@ class FeaturedTiles extends StatelessWidget {
                   (int pageIndex) => Column(
                     children: [
                       SizedBox(
-                        height: screenSize.width / 6,
+                        height: screenSize.width / 3,
                         width: screenSize.width / 3.8,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(5.0),
