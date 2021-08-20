@@ -59,16 +59,16 @@ class _HomePageState extends State<HomePage> {
                   icon: Icon(Icons.brightness_6),
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
-                  color:Colors.blueGrey[100],
+                  color: Colors.white60,
                   onPressed: () {
                     EasyDynamicTheme.of(context).changeTheme();
                   },
                 ),
               ],
               title: Text(
-                'WINEE',
+                "D' LIVIS",
                 style: TextStyle(
-                  color: Colors.blueGrey[100],
+                  color: Colors.white60,
                   fontSize: 20,
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w400,
@@ -124,9 +124,9 @@ class _HomePageState extends State<HomePage> {
               DestinationHeading(screenSize: screenSize),
               DestinationCarousel(),
               FeaturedHeading_pago(
-                              screenSize: screenSize,
-                            ),
-                            FeaturedTiles_pago(screenSize: screenSize),
+                screenSize: screenSize,
+              ),
+              FeaturedTiles_pago(screenSize: screenSize),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),
             ],

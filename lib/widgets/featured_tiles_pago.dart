@@ -38,16 +38,27 @@ class FeaturedTiles_pago extends StatelessWidget {
                             SizedBox(
                               height: screenSize.width / 2.5,
                               width: screenSize.width / 1.5,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(5.0),
-                                child: Image.asset(
-                                  assets[pageIndex],
-                                  fit: BoxFit.cover,
+                              child: Container(
+                                margin: EdgeInsets.all(7),
+                                decoration: BoxDecoration(boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black38,
+                                    offset: Offset(2, 2),
+                                    blurRadius: 5,
+                                  ),
+                                ]),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(5.0),
+                                  child: Image.asset(
+                                    assets[pageIndex],
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ),
                             Padding(
                               padding: EdgeInsets.only(
+                                left: 7,
                                 top: screenSize.height / 70,
                               ),
                               child: Text(
@@ -88,11 +99,21 @@ class FeaturedTiles_pago extends StatelessWidget {
                       SizedBox(
                         height: screenSize.width / 8,
                         width: screenSize.width / 4.8,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(5.0),
-                          child: Image.asset(
-                            assets[pageIndex],
-                            fit: BoxFit.cover,
+                        child: Container(
+                          margin: EdgeInsets.all(7),
+                          decoration: BoxDecoration(boxShadow: [
+                            BoxShadow(
+                              color: Colors.black38,
+                              offset: Offset(2, 2),
+                              blurRadius: 5,
+                            ),
+                          ]),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(5.0),
+                            child: Image.asset(
+                              assets[pageIndex],
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),

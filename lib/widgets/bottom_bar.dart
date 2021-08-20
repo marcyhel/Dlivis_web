@@ -37,7 +37,7 @@ class BottomBar extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  color: Colors.blueGrey,
+                  color: Colors.white60,
                   width: double.maxFinite,
                   height: 1,
                 ),
@@ -60,7 +60,7 @@ class BottomBar extends StatelessWidget {
                 Text(
                   'Copyright © 2021 | WINEE',
                   style: TextStyle(
-                    color: Colors.blueGrey[300],
+                    color: Colors.white60,
                     fontSize: 14,
                   ),
                 ),
@@ -91,7 +91,7 @@ class BottomBar extends StatelessWidget {
                       s3: '',
                     ),
                     Container(
-                      color: Colors.blueGrey,
+                      color: Colors.white60,
                       width: 2,
                       height: 150,
                     ),
@@ -119,7 +119,7 @@ class BottomBar extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    color: Colors.blueGrey,
+                    color: Colors.white60,
                     width: double.maxFinite,
                     height: 1,
                   ),
@@ -128,7 +128,7 @@ class BottomBar extends StatelessWidget {
                 Text(
                   'Copyright © 2021 | WINEE',
                   style: TextStyle(
-                    color: Colors.blueGrey[300],
+                    color: Colors.white60,
                     fontSize: 14,
                   ),
                 ),

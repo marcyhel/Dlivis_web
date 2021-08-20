@@ -41,9 +41,9 @@ class _TopBarContentsState extends State<TopBarContents> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'WINEE',
+                "D' LIVIS",
                 style: TextStyle(
-                  color: Colors.blueGrey[200],
+                  color: Colors.white60,
                   fontSize: 20,
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w400,
@@ -133,7 +133,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                 icon: Icon(Icons.brightness_6),
                 splashColor: Colors.transparent,
                 highlightColor: Colors.transparent,
-                color: Colors.blueGrey[200],
+                color: Colors.white60,
                 onPressed: () {
                   EasyDynamicTheme.of(context).changeTheme();
                 },

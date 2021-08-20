@@ -38,11 +38,21 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
   List<Widget> generateImageTiles(screenSize) {
     return images
         .map(
-          (element) => ClipRRect(
-            borderRadius: BorderRadius.circular(8.0),
-            child: Image.asset(
-              element,
-              fit: BoxFit.cover,
+          (element) => Container(
+            margin: EdgeInsets.all(7),
+            decoration: BoxDecoration(boxShadow: [
+              BoxShadow(
+                color: Colors.black38,
+                offset: Offset(2, 2),
+                blurRadius: 5,
+              ),
+            ]),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
+              child: Image.asset(
+                element,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         )
@@ -63,7 +73,8 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
                   ? PageScrollPhysics()
                   : NeverScrollableScrollPhysics(),
               enlargeCenterPage: true,
-              aspectRatio: 18 / 8,
+              aspectRatio:
+                  ResponsiveWidget.isSmallScreen(context) ? 15 / 8 : 25 / 8,
               autoPlay: true,
               onPageChanged: (index, reason) {
                 setState(() {
@@ -96,7 +107,7 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
         ResponsiveWidget.isSmallScreen(context)
             ? Container()
             : AspectRatio(
-                aspectRatio: 17 / 8,
+                aspectRatio: 22 / 8,
                 child: Center(
                   heightFactor: 1,
                   child: Align(
