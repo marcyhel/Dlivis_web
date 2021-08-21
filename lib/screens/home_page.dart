@@ -1,4 +1,5 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
+import 'package:explore/widgets/pago_paralax.dart';
 import 'package:explore/widgets/web_scrollbar.dart';
 import 'package:explore/widgets/bottom_bar.dart';
 import 'package:explore/widgets/carousel.dart';
@@ -82,27 +83,46 @@ class _HomePageState extends State<HomePage> {
             ),
       //drawer: ExploreDrawer(),
       body: WebScrollbar(
+        isAlwaysShown: ResponsiveWidget.isSmallScreen(context) ? false : true,
         color: Colors.blueGrey,
         backgroundColor: Colors.blueGrey.withOpacity(0.3),
-        width: 10,
+        width: ResponsiveWidget.isSmallScreen(context) ? 10 : 15,
         heightFraction: 0.3,
         controller: _scrollController,
         child: SingleChildScrollView(
           controller: _scrollController,
-          physics: ClampingScrollPhysics(),
+          //physics: ClampingScrollPhysics(),
           child: Column(
             children: [
               Stack(
                 children: [
-                  Container(
-                    child: SizedBox(
-                      height: screenSize.height * 0.45,
-                      width: screenSize.width,
-                      child: Image.asset(
-                        'assets/images/baner.png',
-                        fit: BoxFit.cover,
+                  Positioned(
+                    top: _scrollPosition / 1.7,
+                    child: Container(
+                      child: SizedBox(
+                        height: ResponsiveWidget.isSmallScreen(context)
+                            ? screenSize.height * 0.35
+                            : screenSize.height * 0.70,
+                        width: screenSize.width,
+                        child: Image.asset(
+                          'assets/images/baner.jpeg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
+                  ),
+                  /*    padding: EdgeInsets.only(
+          top: ResponsiveWidget.isSmallScreen(context)
+              ? widget.screenSize.height / 3.3
+              : widget.screenSize.height / 1.55,*/
+                  Positioned(
+                    top: ResponsiveWidget.isSmallScreen(context)
+                        ? screenSize.height / 2.87
+                        : screenSize.height / 1.428,
+                    child: Container(
+                        color: Theme.of(context).backgroundColor,
+                        width: screenSize.width,
+                        height: screenSize.height / 1),
                   ),
                   Column(
                     children: [
@@ -126,6 +146,7 @@ class _HomePageState extends State<HomePage> {
               FeaturedHeading_pago(
                 screenSize: screenSize,
               ),
+              // FeaturedTiles_pago_paralax(screenSize: screenSize),
               FeaturedTiles_pago(screenSize: screenSize),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),

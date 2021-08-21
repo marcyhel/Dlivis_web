@@ -44,12 +44,12 @@ class BottomBar extends StatelessWidget {
                 SizedBox(height: 20),
                 InfoText(
                   type: 'Email',
-                  text: 'winee.lingerie@outlook.com',
+                  text: 'dlivismodaintima@gmail.com',
                 ),
                 SizedBox(height: 5),
                 InfoText(
                   type: 'Contato',
-                  text: '(62) 99234-9163',
+                  text: '(62) 99486-9599',
                 ),
                 SizedBox(height: 5),
                 InfoText(
@@ -58,7 +58,7 @@ class BottomBar extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Copyright © 2021 | WINEE',
+                  "Copyright © 2021 | D' LIVIS",
                   style: TextStyle(
                     color: Colors.white60,
                     fontSize: 14,
@@ -100,12 +100,12 @@ class BottomBar extends StatelessWidget {
                       children: [
                         InfoText(
                           type: 'Email',
-                          text: 'winee.lingerie@outlook.com',
+                          text: 'dlivismodaintima@gmail.com',
                         ),
                         SizedBox(height: 5),
                         InfoText(
                           type: 'Contato',
-                          text: '(62) 99234-9163',
+                          text: '(62) 99486-9599',
                         ),
                         SizedBox(height: 5),
                         InfoText(
@@ -126,7 +126,7 @@ class BottomBar extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Copyright © 2021 | WINEE',
+                  "Copyright © 2021 | D' LIVIS",
                   style: TextStyle(
                     color: Colors.white60,
                     fontSize: 14,

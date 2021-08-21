@@ -19,16 +19,18 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
   List _isHovering = [false, false, false, false];
   List<Widget> rowElements = [];
   /*https://www.instagram.com/winee.lingerie/ */
-  List<String> items = ['WhatsApp', 'Instagram', "Catalogo"];
+  List<String> items = [
+    'WhatsApp',
+    'Instagram',
+  ];
   List<String> link = [
-    'https://wa.me/message/3JLR7KAFW5JSE1',
-    'https://www.instagram.com/winee.lingerie/',
-    'https://wa.me/c/556292349163'
+    'https://wa.me/556294869599',
+    'https://www.instagram.com/dlivismoda_intima/',
   ];
   List<IconData> icons = [
     AntIcons.phone_outline,
     AntIcons.instagram_outline,
-    Icons.art_track_outlined,
+    //Icons.art_track_outlined,
   ];
 
   List<Widget> generateRowElements() {
@@ -56,7 +58,9 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
         ),
       );
       Widget spacer = SizedBox(
-        height: widget.screenSize.height / 20,
+        height: ResponsiveWidget.isSmallScreen(context)
+            ? widget.screenSize.height / 20
+            : widget.screenSize.height / 20,
         child: VerticalDivider(
           width: 1,
           color: Colors.blueGrey[100],
@@ -78,7 +82,9 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
       heightFactor: 1,
       child: Padding(
         padding: EdgeInsets.only(
-          top: widget.screenSize.height * 0.40,
+          top: ResponsiveWidget.isSmallScreen(context)
+              ? widget.screenSize.height / 3.3
+              : widget.screenSize.height / 1.55,
           left: ResponsiveWidget.isSmallScreen(context)
               ? widget.screenSize.width / 12
               : widget.screenSize.width / 5,
@@ -92,7 +98,7 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                   ...Iterable<int>.generate(items.length).map(
                     (int pageIndex) => Padding(
                       padding:
-                          EdgeInsets.only(top: widget.screenSize.height / 80),
+                          EdgeInsets.only(top: widget.screenSize.height / 100),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         hoverColor: Colors.transparent,
