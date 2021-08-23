@@ -18,12 +18,12 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
   int _current = 0;
 
   final List<String> images = [
-    'assets/images/11.png',
-    'assets/images/22.png',
-    'assets/images/33.png',
-    'assets/images/44.png',
-    'assets/images/55.png',
-    'assets/images/66.png',
+    'assets/images/111.png',
+    'assets/images/222.png',
+    'assets/images/333.png',
+    'assets/images/444.png',
+    'assets/images/555.png',
+    'assets/images/666.png',
   ];
 
   final List<String> places = [
@@ -107,7 +107,7 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
         ResponsiveWidget.isSmallScreen(context)
             ? Container()
             : AspectRatio(
-                aspectRatio: 22 / 8,
+                aspectRatio: 21 / 8,
                 child: Center(
                   heightFactor: 1,
                   child: Align(
