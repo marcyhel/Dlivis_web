@@ -12,27 +12,62 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
 
   final CarouselController _controller = CarouselController();
 
-  List _isHovering = [false, false, false, false, false, false, false];
-  List _isSelected = [true, false, false, false, false, false, false];
+  List _isHovering = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+  List _isSelected = [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 
   int _current = 0;
 
   final List<String> images = [
-    'assets/images/111.png',
-    'assets/images/222.png',
-    'assets/images/333.png',
-    'assets/images/444.png',
-    'assets/images/555.png',
-    'assets/images/666.png',
+    'assets/images/a1.jpeg',
+    'assets/images/a2.jpeg',
+    'assets/images/a3.jpeg',
+    'assets/images/a4.jpeg',
+    'assets/images/a5.jpeg',
+    'assets/images/a6.jpeg',
+    'assets/images/a7.jpeg',
+    'assets/images/a8.jpeg',
+    'assets/images/a9.jpeg',
+    'assets/images/a10.jpeg',
+    'assets/images/a11.jpeg',
+    'assets/images/a12.jpeg',
+    'assets/images/a13.jpeg',
+    'assets/images/a14.jpeg',
+    'assets/images/a15.jpeg',
+    'assets/images/a16.jpeg',
+    'assets/images/a17.jpeg',
+    
+    'assets/images/a19.jpeg',
+    'assets/images/a20.jpeg',
+    
+    
+    
+    
   ];
 
   final List<String> places = [
-    '      •      ',
-    '      •      ',
-    '      •      ',
-    '      •      ',
-    '      •      ',
-    '      •      ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+    '  •  ',
+   
+   
+    
+    
   ];
 
   List<Widget> generateImageTiles(screenSize) {
@@ -74,7 +109,7 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
                   : NeverScrollableScrollPhysics(),
               enlargeCenterPage: true,
               aspectRatio:
-                  ResponsiveWidget.isSmallScreen(context) ? 15 / 8 : 25 / 8,
+                  ResponsiveWidget.isSmallScreen(context) ? 9 / 8 : 25 / 8,
               autoPlay: true,
               onPageChanged: (index, reason) {
                 setState(() {
@@ -114,8 +149,8 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
                     alignment: Alignment.bottomCenter,
                     child: Padding(
                       padding: EdgeInsets.only(
-                        left: screenSize.width / 8,
-                        right: screenSize.width / 8,
+                        left:2,
+                        right:2,
                       ),
                       child: Card(
                         elevation: 5,
@@ -151,7 +186,7 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
                                         child: Text(
                                           places[i],
                                           style: TextStyle(
-                                            fontSize: 30,
+                                            fontSize: 20,
                                             color: _isHovering[i]
                                                 ? Theme.of(context)
                                                     .primaryTextTheme
@@ -181,7 +216,7 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
                                               Radius.circular(10),
                                             ),
                                           ),
-                                          width: screenSize.width / 10,
+                                          width: screenSize.width / (places.length+places.length/1.5),
                                         ),
                                       ),
                                     )

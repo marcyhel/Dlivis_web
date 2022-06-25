@@ -1,4 +1,4 @@
-import 'package:explore/widgets/responsive.dart';
+/*import 'package:explore/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedTiles_pago_paralax extends StatefulWidget {
@@ -195,3 +195,4 @@ class _FeaturedTiles_pago_paralaxState
           );
   }
 }
+*/

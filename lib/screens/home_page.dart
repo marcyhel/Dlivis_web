@@ -1,5 +1,5 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
-import 'package:explore/widgets/pago_paralax.dart';
+
 import 'package:explore/widgets/web_scrollbar.dart';
 import 'package:explore/widgets/bottom_bar.dart';
 import 'package:explore/widgets/carousel.dart';
@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                             : screenSize.height * 0.70,
                         width: screenSize.width,
                         child: Image.asset(
-                          'assets/images/baner.jpeg',
+                          'assets/images/newbanner.jpeg',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
               FeaturedHeading_pago(
                 screenSize: screenSize,
               ),
-              // FeaturedTiles_pago_paralax(screenSize: screenSize),
+             
               FeaturedTiles_pago(screenSize: screenSize),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),

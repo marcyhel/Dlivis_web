@@ -15,7 +15,7 @@ class FeaturedTiles extends StatelessWidget {
     'assets/images/9.jpeg',
   ];
 
-  final List<String> title = ["Calcinhas", 'Baby dool', 'Camisola', 'Pijama'];
+  final List<String> title = ["Calcinhas", 'Camisola', 'Baby dool', 'Pijama'];
 
   @override
   Widget build(BuildContext context) {
